@@ -26,7 +26,7 @@ jobs:
         run: docker system prune --all
 
       - name: Build docker image
-        run: docker build --no-cache -t ghcr.io/horego/unraidDockerTest:${{ github.event.inputs.image_tag }} .
+        run: docker build --no-cache -t ghcr.io/horego/unraiddockertest:${{ github.event.inputs.image_tag }} .
 
       - name: Push to github packages
-        run: docker push ghcr.io/horego/unraidDockerTest:${{ github.event.inputs.image_tag }}
+        run: docker push ghcr.io/horego/unraiddockertest:${{ github.event.inputs.image_tag }}
